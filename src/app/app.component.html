@@ -348,12 +348,13 @@
 
   <!-- Resources -->
   <h2>DEMO DE IMPRESION DIRECTA</h2>
-  <p>Seleccione la impresora</p>
+  <p>Seleccione la impresora | Imprimir documento</p>
 
   <div class="card-container">
 
     <select>
-      <option>Ninguna</option>
+      <option>Seleccionar</option>
+      <option *ngFor="let printer of printerList">{{printer}}</option>
     </select>
 
     <button>Imprimir</button>
@@ -376,7 +377,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-<router-outlet></router-outlet>
