@@ -11,7 +11,7 @@ export class PrinterPluginService {
   constructor(private http: HttpClient) { }
 
   getPrintersInstalled(): Observable<string[]> {
-    return this.http.get<string[]>(`/impresoras`);
+    return this.http.get<string[]>(`http://localhost:8000/impresoras`);
   }
 
   getPrintDocument(urlFile: string, printerName: string): Observable<any> {

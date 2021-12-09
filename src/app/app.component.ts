@@ -14,11 +14,16 @@ export class AppComponent implements OnInit {
   constructor(private printerService: PrinterPluginService) { }
 
   ngOnInit(): void {
-    this.printerService.getPrintersInstalled().subscribe(resp => {
-      this.printerList = resp;
-    }, error => {
-      console.log(`error`, error);
-    });
+    // this.printerService.getPrintersInstalled().subscribe(resp => {
+    //   this.printerList = resp;
+    // }, error => {
+    //   console.log(`error`, error);
+    // });
+    const url = `http://localhost:8000/impresoras`;
+    fetch(url).then(response => response.json())
+      .then(data => {
+        this.printerList = data;
+      });
   }
 
   onPrintDocument(printerName: string): void {
