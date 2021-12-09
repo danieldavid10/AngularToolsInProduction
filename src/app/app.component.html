@@ -352,12 +352,12 @@
 
   <div class="card-container">
 
-    <select>
+    <select #printerSelect>
       <option>Seleccionar</option>
       <option *ngFor="let printer of printerList">{{printer}}</option>
     </select>
 
-    <button>Imprimir</button>
+    <button (click)="onPrintDocument(printerSelect.value)">Imprimir</button>
 
   </div>
 
