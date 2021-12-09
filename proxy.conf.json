@@ -1,0 +1,13 @@
+{
+  "/impresoras/*": {
+    "target": "http://localhost:8000",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/url/*": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
